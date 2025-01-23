@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://oligogeneticdiseases.github.io/gvcf-to-vds-pipeline/</loc>
+         <lastmod>2025-01-23</lastmod>
+    </url>
+    <url>
+         <loc>https://oligogeneticdiseases.github.io/gvcf-to-vds-pipeline/about/</loc>
+         <lastmod>2025-01-23</lastmod>
+    </url>
+    <url>
+         <loc>https://oligogeneticdiseases.github.io/gvcf-to-vds-pipeline/api_reference/</loc>
+         <lastmod>2025-01-23</lastmod>
+    </url>
+    <url>
+         <loc>https://oligogeneticdiseases.github.io/gvcf-to-vds-pipeline/contributing/</loc>
+         <lastmod>2025-01-23</lastmod>
+    </url>
+    <url>
+         <loc>https://oligogeneticdiseases.github.io/gvcf-to-vds-pipeline/installation/</loc>
+         <lastmod>2025-01-23</lastmod>
+    </url>
+    <url>
+         <loc>https://oligogeneticdiseases.github.io/gvcf-to-vds-pipeline/usage/</loc>
+         <lastmod>2025-01-23</lastmod>
+    </url>
+</urlset>
