@@ -1,6 +1,8 @@
 # GVCF to VDS Pipeline Documentation
 
-THis is the **GVCF to VDS Pipeline** documentation repository. This site provides comprehensive guides, usage instructions, API references, and contribution guidelines for the GVCF to VDS Pipeline tool.
+This is the **GVCF to VDS Pipeline** documentation repository. This site provides comprehensive guides, usage instructions, API references, and contribution guidelines for the GVCF to VDS Pipeline tool.
+
+Documentation can be found here: [https://oligogeneticdiseases.github.io/gvcf-to-vds-docs/](url)
 
 ## Table of Contents
 
