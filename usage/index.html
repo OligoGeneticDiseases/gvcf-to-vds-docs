@@ -328,14 +328,20 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Command Syntax">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#example-convert-gvcfs-to-vds" class="md-nav__link">
     <span class="md-ellipsis">
       Example: Convert GVCFs to VDS
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -345,6 +351,57 @@
       Detailed Command Usage
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Detailed Command Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#readgvcfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      readgvcfs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter_samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      filter_samples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample_qc" class="md-nav__link">
+    <span class="md-ellipsis">
+      sample_qc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split_multi" class="md-nav__link">
+    <span class="md-ellipsis">
+      split_multi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to_dense_mt" class="md-nav__link">
+    <span class="md-ellipsis">
+      to_dense_mt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -458,14 +515,20 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Command Syntax">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#example-convert-gvcfs-to-vds" class="md-nav__link">
     <span class="md-ellipsis">
       Example: Convert GVCFs to VDS
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -475,6 +538,57 @@
       Detailed Command Usage
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Detailed Command Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#readgvcfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      readgvcfs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter_samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      filter_samples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample_qc" class="md-nav__link">
+    <span class="md-ellipsis">
+      sample_qc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split_multi" class="md-nav__link">
+    <span class="md-ellipsis">
+      split_multi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to_dense_mt" class="md-nav__link">
+    <span class="md-ellipsis">
+      to_dense_mt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -510,7 +624,7 @@
 <h2 id="command-syntax">Command Syntax<a class="headerlink" href="#command-syntax" title="Permanent link">&para;</a></h2>
 <pre><code class="language-bash">gvcf-to-vds &lt;command&gt; [options]
 </code></pre>
-<h2 id="example-convert-gvcfs-to-vds">Example: Convert GVCFs to VDS<a class="headerlink" href="#example-convert-gvcfs-to-vds" title="Permanent link">&para;</a></h2>
+<h3 id="example-convert-gvcfs-to-vds">Example: Convert GVCFs to VDS<a class="headerlink" href="#example-convert-gvcfs-to-vds" title="Permanent link">&para;</a></h3>
 <p>The <code>readgvcfs</code> command reads GVCF files and converts them to VDS format.</p>
 <pre><code class="language-bash">gvcf-to-vds readgvcfs \
   -f /path/to/gvcf_files \
@@ -525,6 +639,84 @@
 <p>Example</p>
 <pre><code class="language-bash">gvcf-to-vds readgvcfs --help
 </code></pre>
+<h3 id="readgvcfs"><code>readgvcfs</code><a class="headerlink" href="#readgvcfs" title="Permanent link">&para;</a></h3>
+<p>Creates or updates a VDS by combining new GVCFs and/or an existing VDS.</p>
+<p><strong>Basic Command</strong>:</p>
+<pre><code class="language-bash">gvcf-to-vds readgvcfs \
+  -f /path/to/gvcfs_or_dir \
+  -d /path/to/dest.vds \
+  --temp /tmp/combine-temp \
+  --use_genome_intervals \
+  --save_plan /path/to/combine-plan.json
+</code></pre>
+<p>Key Options:
+*   -f, --file: GVCF file(s) or directory(ies).
+*   --vds_in: (Optional) Path to an existing VDS to combine into.
+*   -d, --dest: Output VDS path.
+*   --temp: Temporary directory for intermediate files.
+*   --use_genome_intervals or --use_exome_intervals: Hail default partitioning.
+*   --intervals: Custom intervals (e.g., chr1:1-1000000).
+*   --import_interval_size: Size of intervals for GVCF partitioning.</p>
+<h3 id="filter_samples"><code>filter_samples</code><a class="headerlink" href="#filter_samples" title="Permanent link">&para;</a></h3>
+<p>Includes or excludes specific samples from a VDS.</p>
+<pre><code class="language-bash">gvcf-to-vds filter_samples \
+  -v /path/to/vds \
+  -s sample_file.txt \
+  -k \
+  -o /path/to/output.vds
+</code></pre>
+<ul>
+<li>-v, --vds: Input VDS path.</li>
+<li>-s, --samples: Text file with one sample ID per line.</li>
+<li>-k, --keep: If provided, keeps listed samples; otherwise removes them.</li>
+<li>-o, --out: Output path (overwrites if omitted).</li>
+</ul>
+<p>filter_intervals</p>
+<p>Filters intervals in a VDS (either keeping or removing them).</p>
+<pre><code class="language-bash">gvcf-to-vds filter_intervals \
+  -v /path/to/input.vds \
+  -i chr1:1-1000000 chr2:500-1500 \
+  --keep \
+  -o /path/to/output.vds
+</code></pre>
+<ul>
+<li>-v, --vds: Input VDS path.</li>
+<li>-i, --intervals: One or more intervals (Hail locus format).</li>
+<li>--keep: Keep these intervals (default). If not set, remove them.</li>
+<li>-o, --out: Output VDS path.</li>
+</ul>
+<h3 id="sample_qc"><code>sample_qc</code><a class="headerlink" href="#sample_qc" title="Permanent link">&para;</a></h3>
+<p>Computes sample quality metrics on a VDS. Exports results to a file or prints to stdout.</p>
+<pre><code class="language-bash">gvcf-to-vds sample_qc \
+  -v /path/to/input.vds \
+  -o /path/to/output.tsv
+</code></pre>
+<ul>
+<li>-v, --vds: Input VDS path.</li>
+<li>-o, --out: Output table file (default prints to console).</li>
+</ul>
+<h3 id="split_multi"><code>split_multi</code><a class="headerlink" href="#split_multi" title="Permanent link">&para;</a></h3>
+<p>Splits multi-allelic variants.</p>
+<pre><code class="language-bash">gvcf-to-vds split_multi \
+  -v /path/to/input.vds \
+  -o /path/to/split.vds \
+  --filter_changed_loci
+</code></pre>
+<ul>
+<li>-v, --vds: Input VDS.</li>
+<li>-o, --out: Output (split) VDS.</li>
+<li>--filter_changed_loci: If set, filters variants whose locus changes after splitting.</li>
+</ul>
+<h3 id="to_dense_mt"><code>to_dense_mt</code><a class="headerlink" href="#to_dense_mt" title="Permanent link">&para;</a></h3>
+<p>Converts the sparse VDS representation into a dense Hail MatrixTable.</p>
+<pre><code class="language-bash">gvcf-to-vds to_dense_mt \
+  -v /path/to/input.vds \
+  -o /path/to/dense.mt
+</code></pre>
+<ul>
+<li>-v, --vds: Input VDS.</li>
+<li>-o, --out: Output dense MatrixTable path.</li>
+</ul>
 
 
 

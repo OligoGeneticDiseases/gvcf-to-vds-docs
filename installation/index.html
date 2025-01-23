@@ -311,9 +311,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clone-from-github" class="md-nav__link">
+  <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
-      Clone from GitHub
+      Steps
     </span>
   </a>
   
@@ -461,9 +461,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clone-from-github" class="md-nav__link">
+  <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
-      Clone from GitHub
+      Steps
     </span>
   </a>
   
@@ -505,14 +505,33 @@
 </ul>
 <h2 id="install-via-pypi">Install via PyPI<a class="headerlink" href="#install-via-pypi" title="Permanent link">&para;</a></h2>
 <p>You can install the package using <code>pip</code>:</p>
-<pre><code class="language-bash">pip install gvcf_to_vds_pipeline
-</code></pre>
-<h2 id="clone-from-github">Clone from GitHub<a class="headerlink" href="#clone-from-github" title="Permanent link">&para;</a></h2>
-<p>Alternatively, clone the repository and install locally:</p>
+<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Clone the repository</strong>:</li>
+</ol>
 <pre><code class="language-bash">git clone https://github.com/OligoGeneticDiseases/gvcf-to-vds-pipeline.git
 cd gvcf-to-vds-pipeline
-pip install .
 </code></pre>
+<ol>
+<li>(Optional) Create a virtual environment:</li>
+</ol>
+<pre><code class="language-bash">python3 -m venv venv
+source venv/bin/activate
+</code></pre>
+<ol>
+<li>Install:</li>
+</ol>
+<pre><code class="language-bash">pip install .
+</code></pre>
+<ul>
+<li>This will install all necessary Python dependencies and a console script gvcf-to-vds.</li>
+</ul>
+<p>Verifying Installation
+* After install, run gvcf-to-vds --help. You should see a help message for the CLI.
+* Ensure that import hail works in a Python REPL. You may need to install or configure Spark/Hail if not already done.</p>
+<p>Troubleshooting
+* If you encounter Spark/Hail import errors, verify your environment variables and Java installations.
+* Mac OS or Windows users may need additional setup for PySpark. See Hail’s platform notes.</p>
 <h2 id="verify-installation">Verify Installation<a class="headerlink" href="#verify-installation" title="Permanent link">&para;</a></h2>
 <p>After installation, verify that the CLI tool is accessible:</p>
 <pre><code class="language-bash">gvcf-to-vds --help
