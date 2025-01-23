@@ -1,0 +1,41 @@
+site_name: GVCF to VDS Pipeline Documentation
+site_url: https://oligogeneticdiseases.github.io/gvcf-to-vds-pipeline/
+repo_url: https://github.com/OligoGeneticDiseases/gvcf-to-vds-pipeline
+repo_name: GitHub
+
+# Navigation structure
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Usage: usage.md
+  - API Reference: api_reference.md
+  - Contributing: contributing.md
+  - About: about.md
+
+# Theme configuration
+theme:
+  name: material
+  palette:
+    primary: 'blue'
+    accent: 'light blue'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+# Extensions
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - admonition
+
+# Plugins
+plugins:
+  - search
+
+# Additional configuration
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
